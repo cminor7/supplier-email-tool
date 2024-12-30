@@ -15,7 +15,7 @@ from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QMessageBox
 
 windll.shcore.SetProcessDpiAwareness(1)
 
-class Ui_MainWindow(object):
+class UI_MainWindow(object):
     
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -268,7 +268,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
+    ui = UI_MainWindow()
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec())
