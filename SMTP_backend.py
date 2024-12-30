@@ -1,4 +1,4 @@
-# ver 1.2.5
+# ver 1.2.6
 # internal libraries
 from os import path
 from getpass import getuser
@@ -48,7 +48,8 @@ def sendSupplier(test_mode, roles_selected, cc_selected=[], sender='', message='
 		file_dict = {int(Path(file).stem.split('_')[0]):file for file in file_list_filter}
 	
 	for supplier in supplier_list:
-		row_number = df_xl[df_xl['SUPPLIER_NO'] == supplier].index[0] + 2
+		#row_number = df_xl[df_xl['SUPPLIER_NO'] == supplier].index[0] + 2
+		row_number = df_xl.query(f"SUPPLIER_NO == '{supplier}'").index[0] + 2
 				
 		if ws[f'B{row_number}'].value == 'SENT' and not test_mode: # ignore sent rows in live mode
 			total_supplier -= 1 
@@ -72,12 +73,13 @@ def sendSupplier(test_mode, roles_selected, cc_selected=[], sender='', message='
 			error_counter += 1
 			continue
 
-		current_supplier = df_contact[df_contact['SUPPLIER_NUMBER'] == supplier]
+		#current_supplier = df_contact[df_contact['SUPPLIER_NUMBER'] == supplier]
+		current_supplier = df_contact.query(f"SUPPLIER_NUMBER == '{supplier}'")
 		supplier_email_list = current_supplier['SUPPLIER_EMAIL'].unique().tolist()
 		supplier_email = user_email if test_mode else ';'.join(supplier_email_list)
 		supplier_name = current_supplier.iloc[0]['SUPPLIER_NAME'].strip()
 		supplier_no = current_supplier.iloc[0]['SUPPLIER_NUMBER']
-		SPA_ID = current_supplier.iloc[0]['SPA_ID'].strip() if not current_supplier.iloc[0]['SPA_ID'] is None else ''
+		#SPA_ID = current_supplier.iloc[0]['SPA_ID'].strip() if not current_supplier.iloc[0]['SPA_ID'] is None else ''
 		SPA_name = current_supplier.iloc[0]['SPA_NAME'].strip()
 		SPA_title = current_supplier.iloc[0]['SPA_TITLE'].strip()
 		SPA_email = current_supplier.iloc[0]['SPA_EMAIL'].strip() if sender == '' else sender
