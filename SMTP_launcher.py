@@ -242,7 +242,7 @@ class UI_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "SUPPLIER E-MAIL TOOL v2.1.0"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "SUPPLIER E-MAIL TOOL v2.1.2"))
         self.sendMail.setText(_translate("MainWindow", "SEND"))
         self.lblFrom.setText(_translate("MainWindow", "FROM:"))
         self.lblTo.setText(_translate("MainWindow", "TO:"))
