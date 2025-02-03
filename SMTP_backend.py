@@ -1,4 +1,4 @@
-# ver 1.2.6
+# ver 1.3.0
 # internal libraries
 from os import path
 from getpass import getuser
