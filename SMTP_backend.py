@@ -27,7 +27,6 @@ def sendSupplier(test_mode, roles_selected, cc_selected=[], sender='', message='
 	except:
 		return f'[{current_time}] ERROR: BAD SUPPLIER FORMAT, TRY PASTE AS VALUES / NUMBERS'
 	
-	racfid = getuser().upper()
 	user_email = open('user_email.txt', 'r').read().replace(' ', '')
 	df_contact = getContact(roles_selected)
 	supplier_list = df_xl['SUPPLIER_NO'].unique().tolist()
@@ -187,8 +186,6 @@ def serverError(response, success_response):
 		error_response = 'INCORRECT E-MAIL ADDRESSES'
 	elif 'Exceeded storage allocation' in response:
 		error_response = 'EXCEED SIZE LIMIT'
-	elif 'Unable to write data to the transport connection' in response:
-		error_message = 'FAILURE TO SEND'
 	else:
 		error_response = 'OTHER SERVER ERROR'
 	return error_response
