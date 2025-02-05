@@ -28,10 +28,9 @@ def getEmail():
 	df = pd.read_sql(query, sfConn())
 	email = df['WORK_EMAIL'].iloc[0]
 
-	with open(f'{racfid}_email.txt', 'w') as text_file:
+	with open('user_email.txt', 'w') as text_file:
 		text_file.write(email)
 
 
-racfid = getuser().upper()
-if not path.exists(f'{racfid}_email.txt'):
-    getEmail()
+if not path.exists('user_email.txt'):
+      getEmail()
