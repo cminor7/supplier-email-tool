@@ -28,7 +28,7 @@ def sendSupplier(test_mode, roles_selected, cc_selected=[], sender='', message='
 		return f'[{current_time}] ERROR: BAD SUPPLIER FORMAT, TRY PASTE AS VALUES / NUMBERS'
 	
 	racfid = getuser().upper()
-	user_email = open(f'{racfid}_email.txt', 'r').read().replace(' ', '')
+	user_email = open('user_email.txt', 'r').read().replace(' ', '')
 	df_contact = getContact(roles_selected)
 	supplier_list = df_xl['SUPPLIER_NO'].unique().tolist()
 	server_success_response = open('DEVELOPER_FILES/server_success_response.txt', 'r').read()
