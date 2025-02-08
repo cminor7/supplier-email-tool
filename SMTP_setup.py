@@ -1,6 +1,6 @@
 # internal libraries
 from getpass import getuser
-from os import path
+from os import path, makedirs
 
 # external libraries
 import snowflake.connector # pip install snowflake-connector-python
@@ -34,3 +34,6 @@ def getEmail():
 
 if not path.exists('user_email.txt'):
       getEmail()
+
+if not path.exists('ATTACHMENT'):
+    makedirs('ATTACHMENT')
