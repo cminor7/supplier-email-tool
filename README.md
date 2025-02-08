@@ -14,4 +14,6 @@ requests
 python-certifi-win32
 pyodbc
 pyqt6
+openpyxl
 ```
+
