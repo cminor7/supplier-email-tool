@@ -6,7 +6,7 @@ from re import match
 
 # external libraries
 import SMTP_backend
-import SMTP_getEmail
+import SMTP_setup
 from PyQt6 import QtCore, QtGui, QtWidgets
 from PyQt6.QtWidgets import QMessageBox #,QApplication, QMainWindow, QPushButton
 
