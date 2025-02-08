@@ -1,9 +1,6 @@
 # ver 2.1.2
 # internal libraries
 from ctypes import windll
-import webbrowser
-from os import getcwd
-from getpass import getuser
 from time import localtime, strftime
 from re import match
 
@@ -11,7 +8,7 @@ from re import match
 import SMTP_backend
 import SMTP_getEmail
 from PyQt6 import QtCore, QtGui, QtWidgets
-from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QMessageBox
+from PyQt6.QtWidgets import QMessageBox #,QApplication, QMainWindow, QPushButton
 
 windll.shcore.SetProcessDpiAwareness(1)
 
@@ -151,10 +148,6 @@ class UI_MainWindow(object):
         self.menuSETTING.setFont(font)
         self.menuSETTING.setObjectName("menuSETTING")
 
-        self.menuHELP = QtWidgets.QMenu(parent=self.menubar)
-        self.menuHELP.setFont(font)
-        self.menuHELP.setObjectName("menuHELP")
-
         MainWindow.setMenuBar(self.menubar)
         self.actionTESTMODE = QtGui.QAction(parent=MainWindow)
         self.actionTESTMODE.setCheckable(True)
@@ -163,15 +156,8 @@ class UI_MainWindow(object):
         self.actionTESTMODE.setObjectName("actionTESTMODE")
         self.actionTESTMODE.triggered.connect(self.stateChange)
 
-        self.actionMANUAL = QtGui.QAction(parent=MainWindow)
-        self.actionMANUAL.setFont(font)
-        self.actionMANUAL.setObjectName("actionMANUAL")
-        self.actionMANUAL.triggered.connect(self.readMe)
-
         self.menuSETTING.addAction(self.actionTESTMODE)
-        self.menuHELP.addAction(self.actionMANUAL)
         self.menubar.addAction(self.menuSETTING.menuAction())
-        self.menubar.addAction(self.menuHELP.menuAction())
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -226,10 +212,6 @@ class UI_MainWindow(object):
         self.statusbar.showMessage(error_message)
 
 
-    def readMe(self):
-        webbrowser.open_new(f'{getcwd()}/DOCUMENTATION/READ_ME.pdf')
-
-
     def stateChange(self):
         # use to change the test mode label on bottom right corner of UI
         if self.actionTESTMODE.isChecked():
@@ -257,11 +239,8 @@ class UI_MainWindow(object):
         self.cbSPA.setText(_translate("MainWindow", "SPA"))
         self.cbUser.setText(_translate("MainWindow", "USER"))
         self.menuSETTING.setTitle(_translate("MainWindow", "SETTING"))
-        self.menuHELP.setTitle(_translate("MainWindow", "HELP"))
         self.actionTESTMODE.setText(_translate("MainWindow", "Test Mode"))
         self.actionTESTMODE.setShortcut(_translate("MainWindow", "Ctrl+T"))
-        self.actionMANUAL.setText(_translate("MainWindow", "Manual"))
-        self.actionMANUAL.setShortcut(_translate("MainWindow", "Ctrl+H"))
 
 
 if __name__ == "__main__":
