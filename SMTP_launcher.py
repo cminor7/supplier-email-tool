@@ -8,7 +8,7 @@ from re import match
 import SMTP_backend
 import SMTP_setup
 from PyQt6 import QtCore, QtGui, QtWidgets
-from PyQt6.QtWidgets import QMessageBox #,QApplication, QMainWindow, QPushButton
+from PyQt6.QtWidgets import QMessageBox
 
 windll.shcore.SetProcessDpiAwareness(1)
 

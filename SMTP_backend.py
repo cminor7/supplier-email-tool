@@ -1,8 +1,6 @@
 # ver 1.3.0
 # internal libraries
 from os import path
-from getpass import getuser
-from datetime import datetime
 from pathlib import Path
 from time import localtime, strftime
 
