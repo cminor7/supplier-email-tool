@@ -1,19 +1,12 @@
-## TECHNICAL MANUAL
+## SUPPLIER EMAIL TOOL
 
-## REQUIREMENTS
+Supplier email tool automates mass emails to suppliers. It supports HTML formating for more professional looking email.
 
-Must have a text file named *api_key.txt* inside the DEVELOPER_FILES folder containing the key to use this.
+## SETUP
 
-[C++ build tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+Must install [C++ build tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) first.
 
 #### LIBRARIES
 ```
-snowflake-connector-python
-pandas
-requests
-python-certifi-win32
-pyodbc
-pyqt6
-openpyxl
+pip3 install -r requirements.txt
 ```
-
