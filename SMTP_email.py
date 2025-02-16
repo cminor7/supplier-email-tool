@@ -35,7 +35,7 @@ def SMTP(em_from, em_to, em_cc='', em_subject='', em_message='', em_attachment='
 		      <IsBodyHtml>True</IsBodyHtml>
 		      <Server></Server>
 		      <Debug>False</Debug>
-		      <GUID>{TransportProtocol}</GUID>
+		      <GUID><![CDATA[{TransportProtocol}]]></GUID>
 		      <Attachments><![CDATA[{em_attachment}]]></Attachments>
 		      <RelayCount></RelayCount>
 		    </SMTPEmail>
