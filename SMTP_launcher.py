@@ -244,7 +244,7 @@ class UI_MainWindow(object):
 
 if __name__ == "__main__":
     import sys, os
-    os.system("update_certifi.bat") # make sure the certifi are update each time it runs
+    os.system("DEVELOPER_FILES\\update_certifi.bat") # make sure the certifi are update each time it runs
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = UI_MainWindow()

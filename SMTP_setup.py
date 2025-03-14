@@ -43,11 +43,11 @@ def getSecret(conn):
 
 if __name__ == '__main__':
     conn = sfConn()
-    if not path.exists('user_email.txt'):
-          getEmail()
+    if not path.exists('DEVELOPER_FILES/user_email.txt'):
+        getEmail(conn)
 
     if not path.exists('DEVELOPER_FILES/api_key.txt'):
-          getSecret(conn)
+        getSecret(conn)
 
     if not path.exists('ATTACHMENT'):
         makedirs('ATTACHMENT')
