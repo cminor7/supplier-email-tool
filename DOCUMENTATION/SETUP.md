@@ -1,6 +1,6 @@
 ## FIRST TIME SET UP INSTRUCTIONS
 
-STEP 1.	Go to [python offficial website](www.python.org)
+STEP 1.	Go to [python official website](www.python.org)
 
 STEP 2.	Hover mouse over Downloads and click on the button under Download for Windows
 
