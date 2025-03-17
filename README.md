@@ -1,12 +1,6 @@
-## TECHNICAL MANUAL
+## HOW TO USE
 
-## REQUIREMENTS
-
-[C++ build tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
-
-[First time setup](DOCUMENTATION/FIRST_TIME_SETUP.docx)
-
-## How to Use
+[GO HERE FOR FIRST TIME SET UP](DOCUMENTATION/SETUP.md)
 
 **STEP 1.** Open supplier_send_list.xlsx (DO NOT RENAME THIS FILE).
 
