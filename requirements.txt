@@ -1,5 +1,6 @@
 snowflake-connector-python
 pandas
+numpy
 requests
 python-certifi-win32
 pyodbc
