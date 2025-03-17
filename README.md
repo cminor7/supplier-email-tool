@@ -4,7 +4,7 @@
 
 [C++ build tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
 
-[First time setup](DOCUMENTATION\FIRST_TIME_SETUP.docx)
+[First time setup](DOCUMENTATION/FIRST_TIME_SETUP.docx)
 
 ## How to Use
 
@@ -14,13 +14,13 @@
 
 NOTE: If you copy and paste – you must right click, paste supplier numbers as values 
 
-![alt text](DOCUMENTATION\step2.png)
+![alt text](DOCUMENTATION/step2.png)
 
 **STEP 3.** Save and close the supplier_send_list.xlsx file
 
 **STEP 4.** Add file attachment you want to this folder (EACH FILE MUST BE UNDER 2MB). If your file name format looks like: 20002334_myfilename – the code will determine it’s unique for each supplier.
 
-![alt text](DOCUMENTATION\step4.png)
+![alt text](DOCUMENTATION/step4.png)
 
 NOTE: If you want each supplier to get the SAME attachment DO NOT NAME YOUR FILE STARTING WITH NUMBERS.
 
