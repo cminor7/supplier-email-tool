@@ -1,6 +1,10 @@
-## HOW TO USE
+## QUICK LINKS
 
-[GO HERE FOR FIRST TIME SET UP](DOCUMENTATION/SETUP.md)
+[FIRST TIME SET UP INSTRUCTION](DOCUMENTATION/SETUP.md)
+
+[ERROR RESOLUTION](DOCUMENTATION/ERRORS.md)
+
+## HOW TO USE
 
 **STEP 1.** Open supplier_send_list.xlsx (DO NOT RENAME THIS FILE).
 
@@ -72,23 +76,23 @@ You can place your text inside a HTML tag to have the desired format.
 [Click here for a more comprehensive list of tags](https://www.w3schools.com/tags/ref_byfunc.asp)
 
 ```
-<b></b>             ->bold
+<b></b>             -> bold
 
-<u></u> 		    -> underline
+<u></u>             -> underline
 
-<i></i> 		    -> italics
+<i></i>             -> italics
 
-<li></li> 		    -> bullet point
+<li></li>           -> bullet point
 
-<h1>\/h1> 		    -> extra-large header
+<h1>\/h1>           -> extra-large header
 
-<h2></h2>		    -> large header
+<h2></h2>           -> large header
 
-<h3></h3> 		    -> medium header
+<h3></h3>           -> medium header
 
-<h4></h4> 		    -> small header
+<h4></h4>           -> small header
 
-<h5></h5>		    -> extra-small header
+<h5></h5>           -> extra-small header
 
 <a href=""></a>     -> hyperlink
 ```
