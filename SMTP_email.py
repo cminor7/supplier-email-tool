@@ -16,6 +16,9 @@ def fileHexadecimal(filepath):
 def SMTP(em_from, em_to, em_cc='', em_subject='', em_message='', em_attachment=''):
 	url = 'https://netapps.grainger.com/deptutil/ProdMgmt.asmx'
 	TransportProtocol = open('DEVELOPER_FILES/api_key.txt', 'r').read()
+	
+	em_subject = em_subject.encode('utf-8').decode('iso-8859-16')
+	em_message = em_message.replace('\n', '<br>').replace('\t', '&nbsp'*8).encode('utf-8').decode('iso-8859-16')
 
 	if em_attachment: # convert file to hexadecimal for the file request
 		em_attachment = path.basename(em_attachment) + ':' + str(fileHexadecimal(em_attachment))
