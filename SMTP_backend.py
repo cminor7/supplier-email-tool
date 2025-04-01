@@ -16,7 +16,8 @@ def sendSupplier(test_mode, roles_selected, cc_selected=[], sender='', message='
 	supplier_send_file = 'supplier_send_list.xlsx'
 
 	try:
-		df_xl = pd.read_excel(supplier_send_file, sheet_name='SUPPLIER_LIST', engine='openpyxl')
+		with open(supplier_send_file, 'r') as file:
+			df_xl = pd.read_excel(supplier_send_file, sheet_name='SUPPLIER_LIST', engine='openpyxl')
 	except:
 		return f'[{current_time}] ERROR: supplier_send_list.xlsx FILE IN USE'
 	
@@ -166,13 +167,10 @@ def getContact(roles_selected):
 
 def msgTranslator(em_message, info_dict):
 	for k, v in info_dict.items(): em_message = em_message.replace(str(k), str(v))
-	em_message = em_message.replace('\n', '<br>').replace('\t', '&nbsp'*8).encode('utf-8').decode('iso-8859-16')
-	em_message = f"<div style='padding: 3px; width: 120px; word-wrap: break-word;'>{em_message}</div>"
 	return em_message
 
 def subjTranslator(em_subject, info_dict):
 	for k, v in info_dict.items(): em_subject = em_subject.replace(str(k), str(v))
-	em_subject = em_subject.encode('utf-8').decode('iso-8859-16')
 	return em_subject
 
 def serverError(response, success_response):
