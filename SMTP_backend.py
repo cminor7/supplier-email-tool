@@ -42,7 +42,7 @@ def sendSupplier(test_mode, roles_selected, cc_selected=[], sender='', message='
 
 	attachment_logic = attachmentLogic()
 	if attachment_logic == 'UNIQUE FILES': # create dictionary of filepaths
-		file_list_filter = [file for file in file_list if Path(file).stem.split('_')[0].strip().isdigit()]
+		file_list_filter = [file for file in file_list if Path(file).stem.split('_')[0].isdigit()]
 		file_dict = {int(Path(file).stem.split('_')[0]):file for file in file_list_filter}
 	
 	for supplier in supplier_list:
@@ -114,10 +114,8 @@ def sendSupplier(test_mode, roles_selected, cc_selected=[], sender='', message='
 		ws[f'J{row_number}'] = server_response
 		ws[f'F{row_number}'] = role_flag
 
-		try:
-			server_error = serverError(response=server_response, success_response=server_success_response)
-		except:
-			server_error = 'CHECK SERVER_RESPONSE' 
+		server_error = serverError(response=server_response, success_response=server_success_response)
+
 		if server_error != 'NO ERROR':
 			ws[f'B{row_number}'] = 'NOT SENT'
 			ws[f'I{row_number}'] = server_error
@@ -149,7 +147,7 @@ def attachmentLogic():
 	
 	if not file_list:
 		attachment_logic = 'NO FILES'
-	elif Path(file_list[0]).stem.split('_')[0].strip().isdigit():
+	elif Path(file_list[0]).stem.split('_')[0].isdigit():
 		attachment_logic ='UNIQUE FILES'
 	else:
 		attachment_logic = 'STANDARD FILES'

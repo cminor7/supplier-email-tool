@@ -84,7 +84,7 @@ You can place your text inside a HTML tag to have the desired format.
 
 <li></li>           -> bullet point
 
-<h1>\/h1>           -> extra-large header
+<h1></h1>           -> extra-large header
 
 <h2></h2>           -> large header
 
