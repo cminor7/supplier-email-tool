@@ -28,7 +28,7 @@ def getEmail(conn):
 	df = pd.read_sql(query, conn)
 	email = df['WORK_EMAIL'].iloc[0]
 
-	with open('user_email.txt', 'w') as text_file:
+	with open('DEVELOPER_FILES/user_email.txt', 'w') as text_file:
 		text_file.write(email)
 
 
