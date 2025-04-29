@@ -17,7 +17,7 @@ def sendSupplier(test_mode, roles_selected, cc_selected=[], sender='', message='
 
 	try:
 		with open(supplier_send_file, 'r') as file:
-		df_xl = pd.read_excel(supplier_send_file, sheet_name='SUPPLIER_LIST', engine='openpyxl')
+			df_xl = pd.read_excel(supplier_send_file, sheet_name='SUPPLIER_LIST', engine='openpyxl')
 	except:
 		return f'[{current_time}] ERROR: supplier_send_list.xlsx FILE IN USE'
 	
